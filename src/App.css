@@ -1,4 +1,4 @@
-.row-header{
+.row {
   margin:0px auto;
   padding:0px auto;
   display: flex;
@@ -13,17 +13,7 @@
   min-height:400px;
 }
 
-.footer{
-  background-color: #D1C4E9;
-  margin:0px auto;
-  padding: 20px 0px 20px 0px;
-}
-.jumbotron {
-  padding:70px 30px 70px 30px;
-  margin:0px auto;
-  background: #9575CD ;
-  color:floralwhite;
-}
+
 
 address{
   font-size:80%;
@@ -31,6 +21,101 @@ address{
   color:#0f0f0f;
 }
 
-.navbar-dark {
-  background-color: rgb(80, 212, 56);
+/** HEADER **/
+header {
+  background-color: #fff;
+  border-radius: 0;
+  border: 0;
+  
 }
+
+#logo-img {
+  background: url('../public/assets/images/organic-restaurant-seeklogo.com_lg.jpg') no-repeat;
+  width: 100px;
+  height: 100px;
+  margin: 10px 15px 10px 0px;
+  background-size: cover;
+  
+
+}
+
+
+h1 { /* Restaurant name */
+  font-family: 'Lora', serif;
+  color: rgb(80, 212, 56);
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
+}
+
+.nav {
+  margin: 10px;
+  
+}
+.nav{
+  
+  text-align: center;
+  color: rgb(80, 212, 56);
+}
+.nav a:hover {
+  background: #E7E7E7;
+}
+
+
+#phone {
+  margin-top: 5px;
+  color: rgb(80, 212, 56);
+}
+#phone a { /* Phone number */
+  text-align: right;
+  padding-bottom: 0;
+  color: rgb(80, 212, 56);
+}
+#phone div { /* We Deliver */
+  color: #557c3e;
+  text-align: right;
+  padding-right: 15px;
+  color: rgb(80, 212, 56);
+}
+
+
+
+/* END HEADER */
+
+
+/* FOOTER */
+.panel-footer {
+  color: #557c3e;
+  margin-top: 30px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  background-color: #222;
+  border-top: 0;
+}
+.panel-footer div.row {
+  margin-bottom: 35px;
+}
+#hours, #address {
+  line-height: 2;
+  text-align: center;
+}
+#hours > span, #address > span {
+  font-size: 1.3em;
+}
+#address p {
+  color: #557c3e;
+  font-size: .8em;
+  line-height: 1.8;
+  text-align: center;
+}
+#testimonials {
+  font-style: italic;
+}
+#testimonials p:nth-child(2) {
+  margin-top: 25px;
+}
+/* END FOOTER */

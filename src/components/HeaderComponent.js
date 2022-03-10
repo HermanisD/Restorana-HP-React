@@ -22,42 +22,44 @@ class Header extends Component {
     render() {
         return(
         <React.Fragment>
+        <header>
         <Navbar dark expand="md">
           <div className="container">
-              <div className="row-header">
-            <NavbarToggler onClick={this.toggleNav}/>
+              <div className="row">
+            <NavbarToggler onClick={this.toggleNav} />
             <NavbarBrand className="mr-auto" href="/">
-                <img src="assets/images/organic-restaurant-seeklogo.com_lg.jpg" height="100" width="100" alt="Food Style"/>
-                <h1>Food Style</h1>
+              <div id="logo-img"></div>
+              <h1>Food Style</h1>
             </NavbarBrand>
-                
-                <Collapse isOpen={this.state.isNavOpen} navbar>
-                    <Nav navbar>
-                        <NavItem>
-                            <NavLink className="nav-link" to="/home">
-                                <span className="fa fa-home fa-lg"></span> Home
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink className="nav-link" to="/aboutus">
-                                <span className="fa fa-info fa-lg"></span> About Us
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink className="nav-link" to="/menu">
-                                <span className="fa fa-list fa-lg"></span> Menu
-                            </NavLink>
-                        </NavItem>
-                        <NavItem>
-                            <NavLink className="nav-link" to="/contactus">
-                                <span className="fa fa-address-card fa-lg"></span> Contact Us
-                            </NavLink>
-                        </NavItem>
-                    </Nav>
-                    </Collapse>
-                    </div>
+            <Collapse isOpen={this.state.isNavOpen} navbar>
+              <Nav navbar>
+                <NavItem>
+                  <NavLink className="nav" to="/home">
+                    <span className="fa fa-home fa-lg"></span> Home
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="nav" to="/aboutus">
+                    <span className="fa fa-info fa-lg"></span> About Us
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="nav" to="/menu">
+                    <span className="fa fa-list fa-lg"></span> Menu
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink className="nav" to="/contactus">
+                    <span className="fa fa-address-card fa-lg"></span> Contact
+                    Us
+                  </NavLink>
+                </NavItem>
+              </Nav>
+            </Collapse>
+            </div>
           </div>
         </Navbar>
+  </header>
        
         </React.Fragment>
 
