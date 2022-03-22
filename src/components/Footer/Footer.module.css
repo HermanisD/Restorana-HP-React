@@ -5,17 +5,17 @@
 .row {
   margin:0px auto;
   padding:0px auto;
- display: grid;
+ display: flex;
 
  align-items: center;
-grid-template-columns: 1fr 5fr 5fr;
+
 }
 
 
 
 .row-content {
  
-  
+  flex: content;
   
 }
 
@@ -29,16 +29,6 @@ address{
 
 /** HEADER **/
 
-
-#logo-img {
-  background: url('../public/assets/images/organic-restaurant-seeklogo.com_lg.jpg') no-repeat;
-  width: 100px;
-  height: 100px;
-  
-  background-size: cover;
-  
-
-}
 
 
 h1 { /* Restaurant name */
@@ -90,7 +80,7 @@ h1 { /* Restaurant name */
 
 
 /* FOOTER */
-.panel-footer {
+.panelFooter {
   color: #557c3e;
   margin-top: 30px;
   padding-top: 35px;

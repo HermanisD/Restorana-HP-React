@@ -1,13 +1,15 @@
 import React from "react";
+import styles from './Footer.module.css'
+
 
 
 function Footer(){
     return(
 
-<div className="panel-footer">
-    <div className="container">
-      <div className="row">
-        <div id="hours" class="col-sm-4">
+<div className={styles.panelFooter}>
+    <div className={styles.container}>
+      <div className={styles.row}>
+        <div id="hours" className="col-sm-4">
           <span>Darba laiks:</span><br></br>
           Pirmdiena-Ceturtdiena: 11:00 - 22:00<br></br>
           Piekdiena-Svētdiena: 11:00 - 2:30

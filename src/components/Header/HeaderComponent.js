@@ -1,36 +1,48 @@
-import React, {Component} from "react";
-import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem, Jumbotron } from "reactstrap";
-import {NavLink} from 'react-router-dom';
+import React, { Component } from "react";
+import {
+  Navbar,
+  NavbarBrand,
+  Nav,
+  NavbarToggler,
+  Collapse,
+  NavItem,
+  Jumbotron,
+} from "reactstrap";
+import { NavLink } from "react-router-dom";
+import styles from './Header.module.css'
 
 class Header extends Component {
-    
-    constructor (props){
-        super(props);
-        this.state = {
-            isNavOpen:false
-        }
-        this.toggleNav = this.toggleNav.bind(this);
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      isNavOpen: false,
+    };
+    this.toggleNav = this.toggleNav.bind(this);
+  }
 
-    toggleNav(){
-        this.setState({
-            isNavOpen: !this.state.isNavOpen
-        });
-    }
+  toggleNav() {
+    this.setState({
+      isNavOpen: !this.state.isNavOpen,
+    });
+  }
+
+  render() {
+    return (
     
-    
-    render() {
-        return(
-        <React.Fragment>
-        <header>
+        
         <Navbar dark expand="md">
-          <div className="container">
-              <div className="row">
+          <div className="row">
+          <div className="row-content">
             <NavbarToggler onClick={this.toggleNav} />
-            <NavbarBrand className="mr-auto" href="/">
+            <NavbarBrand className="logo mr-auto" href="/">
               <div id="logo-img"></div>
-              <h1>Food Style</h1>
             </NavbarBrand>
+          </div>
+          <div className="row-content">
+            <h1>Food Style</h1>
+          </div>
+          
+          <div className="row-content">
             <Collapse isOpen={this.state.isNavOpen} navbar>
               <Nav navbar>
                 <NavItem>
@@ -58,13 +70,12 @@ class Header extends Component {
             </Collapse>
             </div>
           </div>
+          
         </Navbar>
-  </header>
-       
-        </React.Fragment>
-
-        )
-    }
+        
+      
+    );
+  }
 }
 
 export default Header;
